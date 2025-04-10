@@ -1,7 +1,7 @@
 CREATE TABLE categories (
     id          BIGSERIAL    PRIMARY KEY,
-    name        VARCHAR(255) NOT NULL,
-    description TEXT
+    name        VARCHAR(100) NOT NULL,
+    description VARCHAR(255) NULL,
 );
 
 -- Inserir categorias
@@ -14,12 +14,12 @@ INSERT INTO categories (name, description) VALUES
 
 CREATE TABLE products (
     id          BIGSERIAL    PRIMARY KEY,
-    name        VARCHAR(255) NOT NULL,
-    description TEXT,
+    name        VARCHAR(100) NOT NULL,
+    description VARCHAR(255) NULL,
     price       DECIMAL(19, 2) NOT NULL,
     status      BOOLEAN      NOT NULL,
     code        VARCHAR(50),
-    category_id BIGINT,
+    category_id BIGINT       NOT NULL,
     FOREIGN KEY (category_id) REFERENCES categories (id)
 );
 
@@ -35,3 +35,15 @@ INSERT INTO products (name, description, price, status, code, category_id) VALUE
 ('Monitor 27"', 'Monitor LED Full HD 27 polegadas', 1199.99, true, 'PROD-008', 2),
 ('Fone de Ouvido Bluetooth', 'Fone de ouvido sem fio com cancelamento de ruído', 399.99, true, 'PROD-009', 1),
 ('Microondas 30L', 'Forno microondas com 30 litros e múltiplas funções', 599.99, true, 'PROD-010', 4);
+
+
+CREATE TABLE users (
+    id          BIGSERIAL    PRIMARY KEY,
+    name        VARCHAR(255) NOT NULL,
+    email       VARCHAR(255) NOT NULL UNIQUE,
+    password    VARCHAR(255) NOT NULL,
+    role        VARCHAR(255) NOT NULL,
+);
+
+INSERT INTO users (name, email, password, role) VALUES
+('Bruna Formento', 'contato@simplesdental.com', 'KMbT%5wT*R!46i@@YHqx', 'admin');
