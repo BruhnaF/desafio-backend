@@ -1,0 +1,10 @@
+com\simplesdental\product\controller\ProductController.class
+com\simplesdental\product\model\Product.class
+com\simplesdental\product\ProductApplication.class
+com\simplesdental\product\config\JacksonConfig.class
+com\simplesdental\product\repository\ProductRepository.class
+com\simplesdental\product\controller\CategoryController.class
+com\simplesdental\product\model\Category.class
+com\simplesdental\product\service\ProductService.class
+com\simplesdental\product\service\CategoryService.class
+com\simplesdental\product\repository\CategoryRepository.class

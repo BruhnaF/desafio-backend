@@ -1,7 +1,7 @@
 CREATE TABLE categories (
     id          BIGSERIAL    PRIMARY KEY,
     name        VARCHAR(100) NOT NULL,
-    description VARCHAR(255) NULL,
+    description VARCHAR(255) NULL
 );
 
 -- Inserir categorias
@@ -42,7 +42,7 @@ CREATE TABLE users (
     name        VARCHAR(255) NOT NULL,
     email       VARCHAR(255) NOT NULL UNIQUE,
     password    VARCHAR(255) NOT NULL,
-    role        VARCHAR(255) NOT NULL,
+    role        VARCHAR(4) NOT NULL
 );
 
 INSERT INTO users (name, email, password, role) VALUES
