@@ -4,6 +4,7 @@ import org.springframework.stereotype.Service;
 
 import com.simplesdental.product.model.User;
 import com.simplesdental.product.repository.UserRepository;
+import com.simplesdental.product.service.Result;
 
 import lombok.RequiredArgsConstructor;
 
@@ -12,8 +13,12 @@ import lombok.RequiredArgsConstructor;
 public class UserService {
     private final UserRepository userRepository;
 
-    public RegisterResponse save(RegisterRequest user) {
+    public Result<RegisterResponse> save(RegisterRequest user) {
         User newUser = userRepository.save(user.toModel());
-        return new RegisterResponse(newUser);
+        RegisterResponse userResponse = new RegisterResponse(newUser);
+        
+        Result<RegisterResponse> response = new Result<RegisterResponse>();
+        response.setData(userResponse);
+        return response;
     }
 }
