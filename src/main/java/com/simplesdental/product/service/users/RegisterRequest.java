@@ -5,6 +5,7 @@ import com.simplesdental.product.model.User;
 
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
 import lombok.Data;
 
@@ -20,9 +21,8 @@ public class RegisterRequest {
     @NotBlank(message = "password required")
     @Size(max = 255, message = "password must be least 255 characters")
     private String password;
-    @NotBlank(message = "role required")
-    @Size(max = 5, message = "role must be less than 5 characters")
- //   @ValuesAllowed(propName = "role", values = { "admin", "user" })
+    @NotNull(message = "role required")
+    @RolesAllowed(propName = "role", values = { RoleType.user, RoleType.admin })
     private RoleType role;
 
     public User toModel() {

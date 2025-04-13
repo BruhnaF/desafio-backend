@@ -9,6 +9,7 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 import lombok.Data;
 
 @Data
@@ -32,7 +33,7 @@ public class User {
     @Column(name = "password", length = 255)
     private String password;
 
-    @NotBlank
+    @NotNull
     @Column(name = "role")
     @Enumerated(EnumType.STRING)
     private RoleType role;
