@@ -1,3 +1,4 @@
-desafio-backend/desafio-backend/mvnw.cmd/*
-desafio-backend/desafio-backend/.mvn/*
-desafio-backend/desafio-backend/postgres-data/*
+mvnw.cmd/*
+.mvn/*
+postgres-data/*
+target/*
