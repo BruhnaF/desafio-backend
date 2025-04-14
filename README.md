@@ -75,7 +75,7 @@ Padrões de projeto bem definidos, codigo limpo de facil manutenção, testes un
 4. **Como garantir a resiliência e alta disponibilidade da API durante picos de tráfego e falhas de componentes?**
 5. **Quais práticas de segurança essenciais você implementaria para prevenir vulnerabilidades como injeção de SQL e XSS?**
 5. **Qual a abordagem mais eficaz para estruturar o tratamento de exceções de negócio, garantindo um fluxo contínuo desde sua ocorrência até o retorno da API?**
-Padrão Resulte, onde ficaria resposavel por receber/enviar mensagem de sucesso/falha, deixando try/catch apenas para as mensagens de erro do sistema. 
+Padrão Result, onde ficaria resposavel por receber/enviar mensagem de sucesso/falha, deixando try/catch apenas para as mensagens de erro do sistema. 
 5. **Considerando uma aplicação composta por múltiplos serviços, quais componentes você considera essenciais para assegurar sua robustez e eficiência?**
 6. **Como você estruturaria uma pipeline de CI/CD para automação de testes e deploy, assegurando entregas contínuas e confiáveis?**
 
