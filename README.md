@@ -68,11 +68,14 @@ Você deve ajustar as entidades (model e sql) de acordo com as regras abaixo:
 # Perguntas
 
 1. **Se tivesse a oportunidade de criar o projeto do zero ou refatorar o projeto atual, qual arquitetura você utilizaria e por quê?**
+Escolheria o monolito, pois como é um projeto pequeno, teria um melhor desempenho com essa estrutura.
 2. **Qual é a melhor estratégia para garantir a escalabilidade do código mantendo o projeto organizado?**  
+Padrões de projeto bem definidos, codigo limpo de facil manutenção, testes unitarios.
 3. **Quais estratégias poderiam ser utilizadas para implementar multitenancy no projeto?**
 4. **Como garantir a resiliência e alta disponibilidade da API durante picos de tráfego e falhas de componentes?**
 5. **Quais práticas de segurança essenciais você implementaria para prevenir vulnerabilidades como injeção de SQL e XSS?**
 5. **Qual a abordagem mais eficaz para estruturar o tratamento de exceções de negócio, garantindo um fluxo contínuo desde sua ocorrência até o retorno da API?**
+Componentes de mensageria, onde ficaria resposavel por receber/enviar mensagem de sucesso/falha, deixando try/catch apenas para as mensagens de erro do sistema. 
 5. **Considerando uma aplicação composta por múltiplos serviços, quais componentes você considera essenciais para assegurar sua robustez e eficiência?**
 6. **Como você estruturaria uma pipeline de CI/CD para automação de testes e deploy, assegurando entregas contínuas e confiáveis?**
 
